@@ -7,7 +7,13 @@ describe('pigLatin', function() {
     it("For words that start with one or more consonants, move all of the first consecutive consonants to the end and add ay", function(){
         expect(pigLatin('celery')).to.equal('elerycay');
     });
+
+    it("For words that start with two consonants before a vowel, move all the consonants before the vowel to the end and add ay", function() {
+        expect(pigLatin('dragon')).to.equal('agondray');
+    });
 });
+
+
 
 
 /*
